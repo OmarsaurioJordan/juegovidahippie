@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfsy8o883jogq"]
+
+[ext_resource type="Texture2D" uid="uid://chqu64emn5she" path="res://Sprites/luz_a.png" id="1_yqa1p"]
+[ext_resource type="AudioStream" uid="uid://dlpp0tuttanje" path="res://Sounds/break.wav" id="2_oy4ow"]
+
+[sub_resource type="Gradient" id="Gradient_oy4ow"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1v8ax"]
+gradient = SubResource("Gradient_oy4ow")
+
+[sub_resource type="Curve" id="Curve_y46xr"]
+_data = [Vector2(0, 0.0898877), 0.0, 0.0, 0, 0, Vector2(0.198529, 0.258427), 0.0, 0.0, 0, 0, Vector2(1, 0.0898877), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_s0d2m"]
+curve = SubResource("Curve_y46xr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7fj0h"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 32.0
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 30.0
+initial_velocity_max = 60.0
+angular_velocity_min = -80.0
+angular_velocity_max = 80.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 0.999998
+linear_accel_max = 2.0
+damping_min = 10.0
+damping_max = 15.0
+scale_curve = SubResource("CurveTexture_s0d2m")
+color_ramp = SubResource("GradientTexture1D_1v8ax")
+
+[sub_resource type="GDScript" id="GDScript_yqa1p"]
+script/source = "extends GPUParticles2D
+
+func _ready() -> void:
+	emitting = true
+
+func _on_finished() -> void:
+	queue_free()
+"
+
+[node name="ExtallidoLuz" type="GPUParticles2D"]
+emitting = false
+amount = 32
+texture = ExtResource("1_yqa1p")
+lifetime = 5.0
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_7fj0h")
+script = SubResource("GDScript_yqa1p")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_oy4ow")
+autoplay = true
+
+[connection signal="finished" from="." to="." method="_on_finished"]

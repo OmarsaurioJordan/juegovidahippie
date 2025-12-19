@@ -1,0 +1,534 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3m2fepsqq7se"]
+
+[ext_resource type="Script" uid="uid://d4bjqi64hnfue" path="res://Scripts/Menu.gd" id="1_dubn6"]
+[ext_resource type="Texture2D" uid="uid://6ww56ec2v7rj" path="res://Sprites/fondo.png" id="2_ghr4c"]
+[ext_resource type="Theme" uid="uid://b7qccix6ms7od" path="res://Sprites/Tema.tres" id="2_n72ai"]
+[ext_resource type="PackedScene" uid="uid://dhubri1vahkpc" path="res://Scenes/Hexagono.tscn" id="3_ihk8u"]
+[ext_resource type="Texture2D" uid="uid://b3ormnuuhxqn2" path="res://icon.png" id="4_4aju8"]
+[ext_resource type="AudioStream" uid="uid://cv7mcvt7a2ghu" path="res://Sounds/Error.wav" id="4_smki1"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_dubn6")
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="Sprite2D" parent="."]
+self_modulate = Color(0.857263, 0.742993, 0.881041, 0.39)
+position = Vector2(576.5, 323)
+scale = Vector2(3.23056, 1.85)
+texture = ExtResource("2_ghr4c")
+metadata/_edit_lock_ = true
+
+[node name="Hexagonos" type="Node2D" parent="."]
+position = Vector2(157, 9)
+metadata/_edit_lock_ = true
+
+[node name="Hex1" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(600, 456)
+
+[node name="Hex2" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(552, 534)
+
+[node name="Hex3" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(509, 453)
+
+[node name="Hex4" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(463, 377)
+
+[node name="Hex5" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(421, 455)
+
+[node name="Hex6" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(375, 380)
+
+[node name="Hex7" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(330, 459)
+
+[node name="Hex8" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(379, 534)
+
+[node name="Hex9" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(689, 457)
+
+[node name="Hex10" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(335, 610)
+
+[node name="Hex11" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(242, 458)
+
+[node name="Hex12" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(197, 537)
+
+[node name="Hex13" parent="Hexagonos" instance=ExtResource("3_ihk8u")]
+position = Vector2(245, 612)
+
+[node name="Jugadores" type="Panel" parent="."]
+offset_left = 27.0
+offset_top = 25.0
+offset_right = 318.0
+offset_bottom = 367.0
+theme = ExtResource("2_n72ai")
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Jugadores"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 12.0
+offset_right = 267.0
+offset_bottom = 46.0
+theme = ExtResource("2_n72ai")
+text = "Jugadores"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="P1" type="LineEdit" parent="Jugadores"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 64.0
+offset_right = 268.0
+offset_bottom = 96.0
+theme = ExtResource("2_n72ai")
+placeholder_text = "escriba un nombre"
+alignment = 1
+max_length = 16
+context_menu_enabled = false
+caret_blink = true
+caret_blink_interval = 0.3
+metadata/_edit_lock_ = true
+
+[node name="P2" type="LineEdit" parent="Jugadores"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 108.0
+offset_right = 266.0
+offset_bottom = 146.0
+theme = ExtResource("2_n72ai")
+placeholder_text = "escriba un nombre"
+alignment = 1
+max_length = 16
+context_menu_enabled = false
+caret_blink = true
+caret_blink_interval = 0.3
+metadata/_edit_lock_ = true
+
+[node name="P3" type="LineEdit" parent="Jugadores"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 154.0
+offset_right = 265.0
+offset_bottom = 192.0
+theme = ExtResource("2_n72ai")
+placeholder_text = "escriba un nombre"
+alignment = 1
+max_length = 16
+context_menu_enabled = false
+caret_blink = true
+caret_blink_interval = 0.3
+metadata/_edit_lock_ = true
+
+[node name="P4" type="LineEdit" parent="Jugadores"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 199.0
+offset_right = 268.0
+offset_bottom = 237.0
+theme = ExtResource("2_n72ai")
+placeholder_text = "escriba un nombre"
+alignment = 1
+max_length = 16
+context_menu_enabled = false
+caret_blink = true
+caret_blink_interval = 0.3
+metadata/_edit_lock_ = true
+
+[node name="P5" type="LineEdit" parent="Jugadores"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 244.0
+offset_right = 267.0
+offset_bottom = 282.0
+theme = ExtResource("2_n72ai")
+placeholder_text = "escriba un nombre"
+alignment = 1
+max_length = 16
+context_menu_enabled = false
+caret_blink = true
+caret_blink_interval = 0.3
+metadata/_edit_lock_ = true
+
+[node name="P6" type="LineEdit" parent="Jugadores"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 289.0
+offset_right = 265.0
+offset_bottom = 327.0
+theme = ExtResource("2_n72ai")
+placeholder_text = "escriba un nombre"
+alignment = 1
+max_length = 16
+context_menu_enabled = false
+caret_blink = true
+caret_blink_interval = 0.3
+metadata/_edit_lock_ = true
+
+[node name="Cliente" type="Panel" parent="."]
+offset_left = 345.0
+offset_top = 30.0
+offset_right = 629.0
+offset_bottom = 184.0
+theme = ExtResource("2_n72ai")
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Cliente"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 11.0
+offset_right = 223.0
+offset_bottom = 48.0
+theme = ExtResource("2_n72ai")
+text = "Remoto"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="IP" type="LineEdit" parent="Cliente"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 52.0
+offset_right = 267.0
+offset_bottom = 90.0
+theme = ExtResource("2_n72ai")
+placeholder_text = "digite dirección IP"
+alignment = 1
+max_length = 16
+context_menu_enabled = false
+caret_blink = true
+caret_blink_interval = 0.3
+metadata/_edit_lock_ = true
+
+[node name="ButConectar" type="Button" parent="Cliente"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 98.0
+offset_right = 213.0
+offset_bottom = 137.0
+focus_mode = 0
+text = "CONECTAR"
+metadata/_edit_lock_ = true
+
+[node name="Servidor" type="Panel" parent="."]
+offset_left = 355.0
+offset_top = 207.0
+offset_right = 544.0
+offset_bottom = 312.0
+theme = ExtResource("2_n72ai")
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Servidor"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 9.0
+offset_right = 156.0
+offset_bottom = 46.0
+theme = ExtResource("2_n72ai")
+text = "Local"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ButJugar" type="Button" parent="Servidor"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 164.0
+offset_bottom = 89.0
+focus_mode = 0
+text = "JUGAR"
+metadata/_edit_lock_ = true
+
+[node name="Mision" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 948.0
+offset_top = 260.0
+offset_right = 1120.0
+offset_bottom = 618.0
+theme = ExtResource("2_n72ai")
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="Panel" parent="Mision"]
+layout_mode = 0
+offset_right = 172.0
+offset_bottom = 287.0
+metadata/_edit_lock_ = true
+
+[node name="Minimizado" type="Panel" parent="Mision"]
+layout_mode = 0
+offset_top = 290.0
+offset_right = 172.0
+offset_bottom = 356.0
+metadata/_edit_lock_ = true
+
+[node name="M1" type="Control" parent="Mision"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Mision/M1"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 38.0
+theme = ExtResource("2_n72ai")
+text = "Luz"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Texto" type="Label" parent="Mision/M1"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 41.0
+offset_right = 231.0
+offset_bottom = 391.0
+scale = Vector2(0.666, 0.666)
+theme = ExtResource("2_n72ai")
+text = "Ganas si al finalizar tu turno hay $ fichas de luz más que fichas de sombra.
+O si al final del juego hay más fichas de luz que de sombra"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="M2" type="Control" parent="Mision"]
+anchors_preset = 0
+offset_left = 150.0
+offset_right = 190.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Mision/M2"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 38.0
+theme = ExtResource("2_n72ai")
+text = "Sombra"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Texto" type="Label" parent="Mision/M2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 41.0
+offset_right = 231.0
+offset_bottom = 391.0
+scale = Vector2(0.666, 0.666)
+theme = ExtResource("2_n72ai")
+text = "Ganas si al finalizar tu turno hay $ fichas de sombra  más que fichas de luz.
+O si al final del juego hay más fichas de sombra  que de luz"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="M3" type="Control" parent="Mision"]
+anchors_preset = 0
+offset_left = 300.0
+offset_right = 340.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Mision/M3"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 38.0
+theme = ExtResource("2_n72ai")
+text = "Conexión"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Texto" type="Label" parent="Mision/M3"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 41.0
+offset_right = 231.0
+offset_bottom = 391.0
+scale = Vector2(0.666, 0.666)
+theme = ExtResource("2_n72ai")
+text = "Ganas si al finalizar tu turno hay $ fichas del mismo tipo en línea recta.
+O hay un aro de fichas del mismo tipo, es decir, en torno a una ficha"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="M4" type="Control" parent="Mision"]
+anchors_preset = 0
+offset_left = 450.0
+offset_right = 490.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Mision/M4"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 38.0
+theme = ExtResource("2_n72ai")
+text = "L. Diversa"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Texto" type="Label" parent="Mision/M4"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 41.0
+offset_right = 231.0
+offset_bottom = 391.0
+scale = Vector2(0.666, 0.666)
+theme = ExtResource("2_n72ai")
+text = "Ganas si al finalizar tu turno hay $ fichas en línea recta, y además están intercaladas según su tipo (luz o sombra)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="M5" type="Control" parent="Mision"]
+anchors_preset = 0
+offset_left = 600.0
+offset_right = 640.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Mision/M5"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 38.0
+theme = ExtResource("2_n72ai")
+text = "Equilibrio"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Texto" type="Label" parent="Mision/M5"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 41.0
+offset_right = 231.0
+offset_bottom = 391.0
+scale = Vector2(0.666, 0.666)
+theme = ExtResource("2_n72ai")
+text = "Ganas si al final del juego hay un conteo equitativo entre fichas de luz y de sombra"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="M6" type="Control" parent="Mision"]
+anchors_preset = 0
+offset_left = 750.0
+offset_right = 790.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Mision/M6"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 38.0
+theme = ExtResource("2_n72ai")
+text = "Muerte"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Texto" type="Label" parent="Mision/M6"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 41.0
+offset_right = 231.0
+offset_bottom = 391.0
+scale = Vector2(0.666, 0.666)
+theme = ExtResource("2_n72ai")
+text = "Ganas cuando elimines $ fichas de luz y $ fichas de sombra respectivamente"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="ButVer" type="Button" parent="Mision"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 306.0
+offset_right = 148.0
+offset_bottom = 341.0
+focus_mode = 0
+text = "Siguiente"
+metadata/_edit_lock_ = true
+
+[node name="Informacion" type="Panel" parent="."]
+offset_left = 673.0
+offset_top = 28.0
+offset_right = 1126.0
+offset_bottom = 227.0
+theme = ExtResource("2_n72ai")
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="Label" parent="Informacion"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 1.0
+offset_right = 417.0
+offset_bottom = 39.0
+theme = ExtResource("2_n72ai")
+text = "El Juego de la Vida Hippie"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Texto" type="Label" parent="Informacion"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 39.0
+offset_right = 657.0
+offset_bottom = 257.0
+scale = Vector2(0.666, 0.666)
+theme = ExtResource("2_n72ai")
+text = "Juego casual para 2 a 6 personas, en el mismo PC o por conexión LAN. En la partida verán el nombre del jugador que tiene el turno, la carta asignada al azar y secreta dice cuál es su misión. Puede crear fichas en espacios rodeados de 2 a 4 fichas y puede destruir fichas rodeadas por exceso o defecto de esa cantidad."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="Creditos" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 514.0
+offset_right = 381.0
+offset_bottom = 681.0
+scale = Vector2(0.666, 0.666)
+theme = ExtResource("2_n72ai")
+text = "Juego de mesa diseñado por Antonio Lamat, prototipo digital programado por Omwekiatl"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="Icono" type="Sprite2D" parent="."]
+position = Vector2(150, 463)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_4aju8")
+metadata/_edit_lock_ = true
+
+[node name="SndError" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_smki1")
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="button_down" from="Cliente/ButConectar" to="." method="_on_but_conectar_button_down"]
+[connection signal="button_down" from="Servidor/ButJugar" to="." method="_on_but_jugar_button_down"]
+[connection signal="button_down" from="Mision/ButVer" to="." method="_on_but_ver_button_down"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

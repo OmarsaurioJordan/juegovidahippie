@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqgy1mqjtmlii"]
+
+[ext_resource type="PackedScene" uid="uid://b3m2fepsqq7se" path="res://Scenes/Menu.tscn" id="1_5ai5d"]
+[ext_resource type="Script" uid="uid://xxxj5aqc4226" path="res://Scripts/Game.gd" id="1_73044"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_73044")
+metadata/_edit_lock_ = true
+
+[node name="Menu" parent="." instance=ExtResource("1_5ai5d")]
