@@ -8,7 +8,7 @@ var socketUDP = PacketPeerUDP.new()
 
 func _ready():
 	if socketUDP.bind(UDPport) != OK:
-		get_tree().quit()
+		pass # get_tree().quit() this falls on web export
 	$Menu.Raiz = self
 
 func _exit_tree():
