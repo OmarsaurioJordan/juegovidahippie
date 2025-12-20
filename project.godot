@@ -14,7 +14,8 @@ config/name="JuegoVidaHippie"
 run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="uid://7h4qv3087abw"
+config/windows_native_icon="res://icon.ico"
 
 [display]
 

@@ -7,6 +7,18 @@ const misionLDiversa = 6
 const misionMuerte = 4
 const totalFichas = 19
 
+const animales = [
+	"Zebra", "Caballo", "Perro", "Gato", "Rata", "Águila", "Mantis", "Castor",
+	"Elefante", "Iguana", "Oso", "Pez", "Tiburón", "Pulpo", "Hormiga", "Kiwi",
+	"León", "Tigre", "Lobo", "Cabra", "Buey", "Bisonte", "Venado", "Alce",
+	"Robot", "Víbora", "Musaraña", "Anaconda", "Oruga", "Mariposa", "Mosca",
+	"Zancudo", "Escorpión", "Sirena", "Centauro", "Minotauro", "Vampiro",
+	"Tortuga", "Ibis", "Buho", "Lechuza", "Ratón", "Vaca", "Toro", "Cerdo",
+	"Guepardo", "Pantera", "Araña", "Dodo", "Faraón", "Fideo", "Hipopótamo",
+	"Jaguar", "Jirafa", "Kanguro", "Lombríz", "Nadie", "Ninguno", "Orangután",
+	"Gorila", "Mico", "Ardilla", "Capibara", "Mapache", "Tardígrado", "Ameba",
+	"Roble", "Protozoo", "Hongo", "Palma", "Guadua", "Pasto", "Flor", "Semilla"]
+
 # variables de funcionamiento
 var direcciones = [] # listado de IP del jugador
 var verMision = 0
@@ -172,3 +184,27 @@ func JuntaMisiones():
 	$Mision/M4/Texto.text = txt.replacen("$", str(misionLDiversa))
 	txt = $Mision/M6/Texto.text
 	$Mision/M6/Texto.text = txt.replacen("$", str(misionMuerte))
+
+func _on_but_auto_1_pressed() -> void:
+	auto_button(1)
+
+func _on_but_auto_2_pressed() -> void:
+	auto_button(2)
+
+func _on_but_auto_3_pressed() -> void:
+	auto_button(3)
+
+func _on_but_auto_4_pressed() -> void:
+	auto_button(4)
+
+func _on_but_auto_5_pressed() -> void:
+	auto_button(5)
+
+func _on_but_auto_6_pressed() -> void:
+	auto_button(6)
+
+func auto_button(ind: int) -> void:
+	if get_node("Jugadores/P" + str(ind)).text == "":
+		get_node("Jugadores/P" + str(ind)).text = animales[randi() % animales.size()]
+	else:
+		get_node("Jugadores/P" + str(ind)).text = ""

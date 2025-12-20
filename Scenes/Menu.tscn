@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6ww56ec2v7rj" path="res://Sprites/fondo.png" id="2_ghr4c"]
 [ext_resource type="Theme" uid="uid://b7qccix6ms7od" path="res://Sprites/Tema.tres" id="2_n72ai"]
 [ext_resource type="PackedScene" uid="uid://dhubri1vahkpc" path="res://Scenes/Hexagono.tscn" id="3_ihk8u"]
-[ext_resource type="Texture2D" uid="uid://b3ormnuuhxqn2" path="res://icon.png" id="4_4aju8"]
+[ext_resource type="Texture2D" uid="uid://djfitxrxvspt4" path="res://icon.png" id="4_4aju8"]
 [ext_resource type="AudioStream" uid="uid://cv7mcvt7a2ghu" path="res://Sounds/Error.wav" id="4_smki1"]
 
 [node name="Menu" type="Node2D"]
@@ -83,10 +83,10 @@ metadata/_edit_lock_ = true
 
 [node name="P1" type="LineEdit" parent="Jugadores"]
 layout_mode = 0
-offset_left = 26.0
+offset_left = 78.0
 offset_top = 64.0
 offset_right = 268.0
-offset_bottom = 96.0
+offset_bottom = 102.0
 theme = ExtResource("2_n72ai")
 placeholder_text = "escriba un nombre"
 alignment = 1
@@ -96,9 +96,19 @@ caret_blink = true
 caret_blink_interval = 0.3
 metadata/_edit_lock_ = true
 
+[node name="ButAuto1" type="Button" parent="Jugadores"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 64.0
+offset_right = 69.0
+offset_bottom = 103.0
+focus_mode = 0
+text = "Auto"
+metadata/_edit_lock_ = true
+
 [node name="P2" type="LineEdit" parent="Jugadores"]
 layout_mode = 0
-offset_left = 24.0
+offset_left = 78.0
 offset_top = 108.0
 offset_right = 266.0
 offset_bottom = 146.0
@@ -111,9 +121,19 @@ caret_blink = true
 caret_blink_interval = 0.3
 metadata/_edit_lock_ = true
 
+[node name="ButAuto2" type="Button" parent="Jugadores"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 107.0
+offset_right = 68.0
+offset_bottom = 146.0
+focus_mode = 0
+text = "Auto"
+metadata/_edit_lock_ = true
+
 [node name="P3" type="LineEdit" parent="Jugadores"]
 layout_mode = 0
-offset_left = 23.0
+offset_left = 79.0
 offset_top = 154.0
 offset_right = 265.0
 offset_bottom = 192.0
@@ -126,9 +146,19 @@ caret_blink = true
 caret_blink_interval = 0.3
 metadata/_edit_lock_ = true
 
+[node name="ButAuto3" type="Button" parent="Jugadores"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 153.0
+offset_right = 67.0
+offset_bottom = 192.0
+focus_mode = 0
+text = "Auto"
+metadata/_edit_lock_ = true
+
 [node name="P4" type="LineEdit" parent="Jugadores"]
 layout_mode = 0
-offset_left = 26.0
+offset_left = 78.0
 offset_top = 199.0
 offset_right = 268.0
 offset_bottom = 237.0
@@ -141,9 +171,19 @@ caret_blink = true
 caret_blink_interval = 0.3
 metadata/_edit_lock_ = true
 
+[node name="ButAuto4" type="Button" parent="Jugadores"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 198.0
+offset_right = 68.0
+offset_bottom = 237.0
+focus_mode = 0
+text = "Auto"
+metadata/_edit_lock_ = true
+
 [node name="P5" type="LineEdit" parent="Jugadores"]
 layout_mode = 0
-offset_left = 25.0
+offset_left = 76.0
 offset_top = 244.0
 offset_right = 267.0
 offset_bottom = 282.0
@@ -156,9 +196,19 @@ caret_blink = true
 caret_blink_interval = 0.3
 metadata/_edit_lock_ = true
 
+[node name="ButAuto5" type="Button" parent="Jugadores"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 244.0
+offset_right = 69.0
+offset_bottom = 283.0
+focus_mode = 0
+text = "Auto"
+metadata/_edit_lock_ = true
+
 [node name="P6" type="LineEdit" parent="Jugadores"]
 layout_mode = 0
-offset_left = 23.0
+offset_left = 75.0
 offset_top = 289.0
 offset_right = 265.0
 offset_bottom = 327.0
@@ -169,6 +219,16 @@ max_length = 16
 context_menu_enabled = false
 caret_blink = true
 caret_blink_interval = 0.3
+metadata/_edit_lock_ = true
+
+[node name="ButAuto6" type="Button" parent="Jugadores"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 289.0
+offset_right = 68.0
+offset_bottom = 328.0
+focus_mode = 0
+text = "Auto"
 metadata/_edit_lock_ = true
 
 [node name="Cliente" type="Panel" parent="."]
@@ -528,6 +588,12 @@ stream = ExtResource("4_smki1")
 wait_time = 3.0
 one_shot = true
 
+[connection signal="pressed" from="Jugadores/ButAuto1" to="." method="_on_but_auto_1_pressed"]
+[connection signal="pressed" from="Jugadores/ButAuto2" to="." method="_on_but_auto_2_pressed"]
+[connection signal="pressed" from="Jugadores/ButAuto3" to="." method="_on_but_auto_3_pressed"]
+[connection signal="pressed" from="Jugadores/ButAuto4" to="." method="_on_but_auto_4_pressed"]
+[connection signal="pressed" from="Jugadores/ButAuto5" to="." method="_on_but_auto_5_pressed"]
+[connection signal="pressed" from="Jugadores/ButAuto6" to="." method="_on_but_auto_6_pressed"]
 [connection signal="button_down" from="Cliente/ButConectar" to="." method="_on_but_conectar_button_down"]
 [connection signal="button_down" from="Servidor/ButJugar" to="." method="_on_but_jugar_button_down"]
 [connection signal="button_down" from="Mision/ButVer" to="." method="_on_but_ver_button_down"]
