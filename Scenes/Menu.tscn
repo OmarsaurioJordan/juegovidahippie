@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6ww56ec2v7rj" path="res://Sprites/fondo.png" id="2_ghr4c"]
 [ext_resource type="Theme" uid="uid://b7qccix6ms7od" path="res://Sprites/Tema.tres" id="2_n72ai"]
 [ext_resource type="PackedScene" uid="uid://dhubri1vahkpc" path="res://Scenes/Hexagono.tscn" id="3_ihk8u"]
-[ext_resource type="Texture2D" uid="uid://djfitxrxvspt4" path="res://icon.png" id="4_4aju8"]
+[ext_resource type="Texture2D" uid="uid://7h4qv3087abw" path="res://icono.png" id="4_4aju8"]
 [ext_resource type="AudioStream" uid="uid://cv7mcvt7a2ghu" path="res://Sounds/Error.wav" id="4_smki1"]
 
 [node name="Menu" type="Node2D"]

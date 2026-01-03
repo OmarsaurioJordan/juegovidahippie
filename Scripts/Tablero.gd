@@ -5,6 +5,8 @@ const VACIO = 0
 const SOMBRA = 1
 const LUZ = 2
 
+const CAM_SPEED = 200.0
+
 # constantes manipulables
 const misionLuzSombra = 4
 const misionConexion = 5
@@ -130,7 +132,7 @@ func Preparacion():
 
 # ciclo principal: mover mouse y entradas de comandos
 
-func _process(_delta):
+func _process(delta):
 	$Mouse.position = get_global_mouse_position()
 	if Input.is_action_just_pressed("act_mouse_left"):
 		if !enGUI and MiTurno():
@@ -163,6 +165,15 @@ func _process(_delta):
 		posClic = $Mouse.position
 	elif posClic.x != 0 and posClic.y != 0:
 		$Camara.position += posClic - $Mouse.position
+	# movimiento de camara con botones
+	if $Camara/GUI/Mover/ButUp.button_pressed:
+		$Camara.position.y -= CAM_SPEED * delta
+	elif $Camara/GUI/Mover/ButDown.button_pressed:
+		$Camara.position.y += CAM_SPEED * delta
+	if $Camara/GUI/Mover/ButLeft.button_pressed:
+		$Camara.position.x -= CAM_SPEED * delta
+	elif $Camara/GUI/Mover/ButRight.button_pressed:
+		$Camara.position.x += CAM_SPEED * delta
 	# manejar mensajes UDP
 	while Raiz.socketUDP.get_available_packet_count() > 0:
 		var data = Raiz.socketUDP.get_packet()
@@ -510,3 +521,13 @@ func _on_watchdog_timeout():
 	ActualizacionUDP()
 	if resultados != "":
 		ResultadosUDP()
+
+func _on_but_zoom_in_pressed() -> void:
+	$Camara.zoom *= 1.1
+	$Camara.zoom = $Camara.zoom.clamp(Vector2(0.25, 0.25), Vector2(1.5, 1.5))
+	$Camara/GUI.scale = Vector2(1.0 / $Camara.zoom.x, 1.0 / $Camara.zoom.y)
+
+func _on_but_zoom_out_pressed() -> void:
+	$Camara.zoom *= 0.9
+	$Camara.zoom = $Camara.zoom.clamp(Vector2(0.25, 0.25), Vector2(1.5, 1.5))
+	$Camara/GUI.scale = Vector2(1.0 / $Camara.zoom.x, 1.0 / $Camara.zoom.y)
